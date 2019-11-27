@@ -63,6 +63,7 @@ class AdminLogin extends Component {
                 icon="mail"
                 iconPosition="left"
                 placeholder="Please Enter Email"
+                value={email}
                 onChange={this.handleChange}
                 type="email"
                 label="Email Address"
@@ -74,11 +75,14 @@ class AdminLogin extends Component {
                 icon="lock"
                 iconPosition="left"
                 placeholder="Please Enter Password"
+                value={password}
                 onChange={this.handleChange}
                 type="password"
                 label="Password"
               />
-              <Button color="blue" fluid size="large">
+              <Button color="blue" fluid size="large"
+              onClick={this.handleSubmit}
+              >
                 Submit
               </Button>
             </Segment>
